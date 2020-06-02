@@ -1,0 +1,9 @@
+---
+ 
+- hosts: all
+  vars:
+    #variable needed during node installation
+    var_node: /tmp
+  roles:
+    - mongodb
+    - nodejs

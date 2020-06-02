@@ -1,0 +1,11 @@
+---
+- hosts: all
+  name: Deploy the Ansistrano Demo Todo-application
+  
+  vars:
+    ansistrano_deploy_from: ~/casestudy/To-Do-List
+    ansistrano_deploy_to: /var/www/To-Do-List
+    ansistrano_keep_releases: 3
+  
+  roles:
+    - ansistrano.deploy 

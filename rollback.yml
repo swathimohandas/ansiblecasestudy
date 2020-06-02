@@ -1,0 +1,11 @@
+---
+- hosts: all
+  name: Rolls back the  Ansistrano Demo Todo-application
+  
+  vars:
+    
+    ansistrano_deploy_to: /var/www/To-Do-List
+    
+  
+  roles:
+    - ansistrano.rollback 
