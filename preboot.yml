@@ -1,0 +1,10 @@
+---
+
+- hosts: all
+  
+  tasks:
+    - name: Install vsftpd package
+      apt: name=vsftpd state=latest
+
+    - name: Start and enable vsftpd service
+      systemd: name=vsftdp state=restarted enabled=yes 
